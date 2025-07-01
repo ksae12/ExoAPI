@@ -815,3 +815,4 @@ C:\Users\ferna\Desktop\Programação\SENAI\Desenvolvimento de API\Exo.WebApi\obj
 C:\Users\ferna\Desktop\Programação\SENAI\Desenvolvimento de API\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.pdb
 C:\Users\ferna\Desktop\Programação\SENAI\Desenvolvimento de API\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.genruntimeconfig.cache
 C:\Users\ferna\Desktop\Programação\SENAI\Desenvolvimento de API\Exo.WebApi\obj\Debug\net6.0\ref\Exo.WebApi.dll
+C:\Users\ferna\Desktop\Programação\SENAI\Desenvolvimento de API\Exo.WebApi\obj\Debug\net6.0\Exo.WebApi.sourcelink.json

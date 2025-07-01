@@ -56,10 +56,10 @@ public class ProjetosController : ControllerBase
             _projetoRepository.Deletar(id);
             return Ok("Projeto excluído com sucesso!");
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
 
-            return BadRequest();
+            return BadRequest(ex);
         }
     }
 }
