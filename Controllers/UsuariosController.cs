@@ -1,5 +1,6 @@
 using Exo.WebApi.Models;
 using Exo.WebApi.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.JsonWebTokens;
@@ -75,6 +76,7 @@ public class UsuariosController : ControllerBase
         );
     }
 
+    [Authorize]
     [HttpPut("{id}")]
     public IActionResult Atualizar(int id, UsuarioModel usuario)
     {
@@ -82,6 +84,7 @@ public class UsuariosController : ControllerBase
         return StatusCode(201, "Usuário atualizado");
     }
 
+    [Authorize]
     [HttpDelete("{id}")]
     public IActionResult Deletar(int id)
     {
