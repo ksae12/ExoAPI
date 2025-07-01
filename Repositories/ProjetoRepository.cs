@@ -19,4 +19,11 @@ public class ProjetoRepository
     {
         return _context.Projetos.ToList();
     }
+
+
+    public void Cadastrar(Projeto projeto)
+    {
+        _context.Projetos.Add(projeto);
+        _context.SaveChanges();
+    }
 }
