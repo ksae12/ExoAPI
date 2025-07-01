@@ -28,4 +28,16 @@ public class ProjetosController : ControllerBase
         _projetoRepository.Cadastrar(projeto);
         return StatusCode(201, "Cadastro feito com sucesso!");
     }
+
+    [HttpGet("{id}")]
+    public IActionResult BucarPorId(int id)
+    {
+        Projeto projeto = _projetoRepository.BuscarPorId(id);
+
+        if (projeto == null)
+        {
+            return NotFound("Projeto não encontrado!");
+        }
+        return Ok(projeto);
+    }
 }
