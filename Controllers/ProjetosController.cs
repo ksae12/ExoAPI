@@ -47,4 +47,19 @@ public class ProjetosController : ControllerBase
         _projetoRepository.Atualizar(id, projeto);
         return StatusCode(204, "Projeto atualizado com sucesso!");
     }
+
+    [HttpDelete("{id}")]
+    public IActionResult Deletar(int id)
+    {
+        try
+        {
+            _projetoRepository.Deletar(id);
+            return Ok("Projeto excluído com sucesso!");
+        }
+        catch (Exception e)
+        {
+
+            return BadRequest();
+        }
+    }
 }
