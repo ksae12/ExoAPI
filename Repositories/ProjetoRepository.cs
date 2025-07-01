@@ -26,4 +26,9 @@ public class ProjetoRepository
         _context.Projetos.Add(projeto);
         _context.SaveChanges();
     }
+
+    public Projeto BuscarPorId(int id)
+    {
+        return _context.Projetos.Find(id);
+    }
 }
