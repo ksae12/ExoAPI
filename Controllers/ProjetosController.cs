@@ -21,4 +21,11 @@ public class ProjetosController : ControllerBase
     {
         return Ok(_projetoRepository.Listar());
     }
+
+    [HttpPost]
+    public IActionResult Cadastrar(Projeto projeto)
+    {
+        _projetoRepository.Cadastrar(projeto);
+        return StatusCode(201, "Cadastro feito com sucesso!");
+    }
 }
