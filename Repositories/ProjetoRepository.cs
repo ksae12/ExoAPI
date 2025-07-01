@@ -45,4 +45,11 @@ public class ProjetoRepository
         _context.Projetos.Update(projetoBuscado);
         _context.SaveChanges();
     }
+
+    public void Deletar(int id)
+    {
+        Projeto projetoBuscado = _context.Projetos.Find(id);
+        _context.Projetos.Remove(projetoBuscado);
+        _context.SaveChanges();
+    }
 }
