@@ -15,6 +15,7 @@ public class ExoContext : DbContext
     {
     }
     public DbSet<Projeto> Projetos { get; set; }
+    public DbSet<UsuarioModel> Usuarios { get; set; }
 
 
 }
