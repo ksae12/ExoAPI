@@ -40,4 +40,11 @@ public class ProjetosController : ControllerBase
         }
         return Ok(projeto);
     }
+
+    [HttpPut("{id}")]
+    public IActionResult Atualizar(int id, Projeto projeto)
+    {
+        _projetoRepository.Atualizar(id, projeto);
+        return StatusCode(204, "Projeto atualizado com sucesso!");
+    }
 }
