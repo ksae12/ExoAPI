@@ -31,4 +31,18 @@ public class ProjetoRepository
     {
         return _context.Projetos.Find(id);
     }
+
+    public void Atualizar(int id, Projeto projeto)
+    {
+        Projeto projetoBuscado = _context.Projetos.Find(id);
+
+        if (projetoBuscado != null)
+        {
+            projetoBuscado.NomeDoProjeto = projeto.NomeDoProjeto;
+            projetoBuscado.Area = projeto.Area;
+            projetoBuscado.Status = projetoBuscado.Status;
+        }
+        _context.Projetos.Update(projetoBuscado);
+        _context.SaveChanges();
+    }
 }
