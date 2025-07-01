@@ -50,5 +50,19 @@ public class UsuariosController : ControllerBase
         return StatusCode(201, "Usuário atualizado");
     }
 
+    [HttpDelete("{id}")]
+    public IActionResult Deletar(int id)
+    {
+        try
+        {
+            _usuarioRepository.Deletar(id);
+            return StatusCode(204, "Usuário deletado!");
+        }
+        catch (Exception)
+        {
+
+            return BadRequest("Não foi possível deletar o usuário");
+        }
+    }
 
 }
